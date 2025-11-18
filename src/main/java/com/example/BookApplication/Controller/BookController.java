@@ -27,4 +27,10 @@ public class BookController {
         final Book bookByname= bookService.getbookByname(name);
         return ResponseEntity.ok(bookByname);
     }
+
+    @PutMapping("/updateBook")
+    public ResponseEntity<Book> updateBook(@RequestBody Book book){
+        Book updatebook = bookService.updateBook(book);
+        return ResponseEntity.ok(updatebook);
+    }
 }

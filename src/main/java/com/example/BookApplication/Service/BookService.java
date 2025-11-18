@@ -18,4 +18,8 @@ public class BookService {
     public Book getbookByname(String name ) {
         return bookRepository.findByTitle(name);
     }
+
+    public Book updateBook(Book book) {
+    return bookRepository.save(book);
+    }
 }

@@ -10,7 +10,12 @@ public class BookService {
 
     @Autowired
     BookRepository bookRepository;
+
     public Book addBook(Book book){
         return bookRepository.save(book);
+    }
+
+    public Book getbookByname(String name ) {
+        return bookRepository.findByTitle(name);
     }
 }
